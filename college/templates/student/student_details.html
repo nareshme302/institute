@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student_details</title>
+</head>
+<body>
+Name : {{student.name}}<br>
+BRANCH : {{student.branch}}<br>
+PHONE NUMBER : {{student.phone_number}}<br>
+Date Of Birth : {{student.phone_number}}<br>
+EMAIL : {{student.email}}<br>
+PHOTO : <p><img src="/media/{{student.photo}}" style="height:200px"></p><br>
+FILE : <a href='/media/{{student.file}}' target="_blank">{{student.file}}</a>
+</body><br><br>
+<div><button><a href="/std_br/{{branch.id}}/">Back</a>
+    </button>
+</div><br>
+<div><button>
+    <a href="update/"> Update</a>
+    </button>
+</div>
+
+</body>
+</html>

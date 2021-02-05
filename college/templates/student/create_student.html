@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create_student</title>
+</head>
+<body>
+<form action="." method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="save" name="save"/>
+</form><br>
+<div>
+    <button><a href="/std_br/">Back</a></button>
+</div><br>
+BACK TO HOME PAGE : <button><a href="/home">click Here</a> </button>
+</body>
+</html>

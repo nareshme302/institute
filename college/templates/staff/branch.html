@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<center><h2>STAFF BRANCH LIST</h2></center>
+
+<table style="width:100%">
+    <tr>
+    <th>S.No</th>
+    <th>BRANCH</th>
+    <th>WEB PAGE</th>
+  </tr>
+    {% if branches %}
+        {% for branch in branches %}
+    <tr>
+        <th>{{forloop.counter}}</th>
+        <th>{{branch}}</th>
+        <th><button><a href="st_b/{{branch.id}}/">Click Here</a></button><br></div></th>
+  </tr>
+        {% endfor %}
+    {% else %}
+        NO BRANCHES
+    {% endif %}
+</table><br><br>
+
+</body>
+</html>
+<div>
+<!--    <a href="stf_b_create/">Branch Create</a><br>-->
+    <center><button><a href="/staff/2/save_staff/">Create Staff</a></button></center>
+</div><br>
+<div><br>
+    <button><a href="/staff/log_out/">LOG OUT</a></button>
+</div>
+</body>
+</html>

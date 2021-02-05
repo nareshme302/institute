@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<center><h2>STUDENTS BRANCH LIST</h2></center>
+
+<table style="width:100%">
+    <tr>
+    <th>S.No</th>
+    <th>BRANCH</th>
+    <th>WEB PAGE</th>
+  </tr>
+    {% if branches %}
+        {% for branch in branches %}
+    <tr>
+        <th>{{forloop.counter}}</th>
+        <th>{{branch}}</th>
+        <th><button><a href="{{branch.id}}/">Click Here</a></button><br></div></th>
+  </tr>
+        {% endfor %}
+    {% endif %}
+</table><br><br>
+
+</body>
+</html>
+
+
+<div>
+    <center><button><a href="/std_br/2/save_student/">Student Application</a></button></center><br>
+</div>
+<div>
+    <button><a href="/std_br/log_out/">Log out</a> </button>
+</div>
+</body>
+</html>

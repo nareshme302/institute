@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student_list</title>
+</head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<center><h2> STAFF LIST</h2></center>
+
+<table style="width:100%">
+    <tr>
+        <th>S.No</th>
+        <th>STAFF NAME</th>
+        <th>DETAILS</th>
+        <th>DELETE</th>
+  </tr>
+    {%if staff_list %}
+        {% for staff in staff_list %}
+    <tr>
+        <th>{{forloop.counter}}</th>
+        <th>{{ staff }}</th>
+        <th><button><a href="{{staff.id}}/">Click Here</a></button><br></div></th>
+        <th><button><a href="{{staff.id}}/delete/">Delete</a> <br></button></th>
+  </tr>
+        {% endfor %}
+    {% else %}
+        CREATE STAFF MEMBER
+    {% endif %}
+</table><br><br>
+
+</body>
+</html>
+    <!--<div><a href="/staff/{{branch.id}}/save_staff/">Create Staff</a> </div>-->
+    <button><div><a href="/staff/">Back</a></button>
+    </div>
+    </body>
+</html>

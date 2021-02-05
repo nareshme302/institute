@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>staff_update</title>
+</head>
+<body>
+<form action="." method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+<!--    NAME : <input type="text" name="name" value="{{staff.name}}" /><br>-->
+<!--    BRANCH : <input type="text" name="staff.branch" value="{{staff.branch}}" /><br>-->
+<!--    PHONE NUMBER : <input type="text" name="staff.phone_number" value="{{staff.phone_number}}" /><br>-->
+<!--    EMAIL : <input type="email" name="staff.email" value="{{staff.email}}" /><br>-->
+<!--    PHOTO : <input type="file" name="staff.photo" value="{{staff.photo}}" /><br>-->
+    <input type="submit" value="save"  name="save"/>
+
+</form>
+
+</body>
+</html>

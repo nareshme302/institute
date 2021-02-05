@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>staff_details</title>
+</head>
+<h3><body><div><center>STAFF DETAILS</center></div></h3>
+
+Name : {{staff.name}}<br>
+BRANCH : {{staff.branch}}<br>
+PHONE NUMBER : {{staff.phone_number}}<br>
+EMAIL : {{staff.email}}<br>
+PHOTO : <p><img src="/media/{{staff.photo}}" style="height:200px"></p><br>
+FILE : <a href='/media/{{staff.file}}' target="_blank">{{staff.file}}</a>
+</body><br><br>
+<div><button><a href="/staff/st_b/{{branch.id}}/">Back</a></button>
+</div>
+<div><br><br>
+    <button><a href="update/">Update Staff Details</a></button>
+</div>
+</html>

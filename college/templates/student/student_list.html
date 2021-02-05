@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student_list</title>
+</head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<center><h2> STUDENTS LIST</h2></center>
+
+<table style="width:100%">
+    <tr>
+    <th>S.No</th>
+    <th>STUDENT NAME</th>
+    <th>DETAILS</th>
+        <th>DELETE</th>
+  </tr>
+    {%if students %}
+        {% for student in students %}
+    <tr>
+        <th>{{forloop.counter}}</th>
+        <th>{{ student }}</th>
+        <th><button><a href="{{student.id}}/">Click Here</a></button><br></div></th>
+        <th><button><a href="{{student.id}}/delete/">Delete</a> <br></button></th>
+  </tr>
+        {% endfor %}
+    {% else %}
+        CREATE STUDENT FIRST
+    {% endif %}
+</table><br><br>
+
+</body>
+</html>
+<!--<div><a href="save_student/">Create Student</a> </div>-->
+<div><button><a href="/std_br/">Back</a></button> </div>
+
+</body>
+</html>

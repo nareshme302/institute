@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>log_in</title>
+</head>
+<body>
+<h3>STAFF LOGIN</h3>
+<form action="." method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Login" name="login"/>
+</form><br>
+<div>
+    STAFF SIGN UP: <button><a href="/staff/sign_up/"> Signup</a> </button>
+</div><br>
+BACK TO HOME PAGE : <button><a href="/home/">Back</a> </button>
+
+</body>
+</html>
